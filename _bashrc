@@ -124,6 +124,9 @@ fi
 # add gae to path
 export PATH=$HOME/Documents/gae/:$PATH
 
+# added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
 # my configs
 echo 'Hi, Ray!'
 PS1='\W> '
@@ -141,3 +144,6 @@ alias cmdfreq='sort ~/.bash_history | uniq -c | sort -n -r | less'
 alias gas='git add --all . && git status'
 alias gc='git commit -am'
 alias gp='git push -u origin master'
+# faster project folder navigation
+BR=$HOME/Documents/briefr
+
