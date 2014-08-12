@@ -110,8 +110,12 @@
      (color-theme-initialize)
      (color-theme-robin-hood)))
 
+;; settings set scss to css mode
+(add-to-list 'auto-mode-alist '("\\.scss" . css-mode))
+
 ;; settings indentation width
 (setq javascript-indent-level 4)
+(setq cssm-indent-level 2)
 
 ;; settings for font
 ;; (set-face-attribute 'default nil :family "Anonymous Pro" :height 120)

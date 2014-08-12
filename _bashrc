@@ -114,7 +114,9 @@ if ! shopt -oq posix; then
 fi
 
 # deal path for ruby, irb, gem
-source $HOME/.rvm/scripts/rvm
+# source $HOME/.rvm/scripts/rvm
+export PATH=$HOME/.rvm/gems/ruby-2.0.0-p481/bin/:$PATH
+# export PATH=$HOME/.rvm/gems/ruby-1.9.3-p194/bin/:$PATH
 
 # enable 256 colors
 if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
@@ -125,7 +127,7 @@ fi
 export PATH=$HOME/Documents/gae/:$PATH
 
 # added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=/usr/local/heroku/bin:$PATH
 
 # my configs
 echo 'Hi, Ray!'
@@ -146,4 +148,9 @@ alias gc='git commit -am'
 alias gp='git push -u origin master'
 # faster project folder navigation
 BR=$HOME/Documents/briefr
+# faster rails commands
+alias rc='rails c'
+alias rs='rails s'
+# faster grep for ps
+alias psgrep='ps aux | grep '
 
