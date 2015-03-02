@@ -5,6 +5,9 @@
 ;; settings for enabling tab completion in M-x shell
 (require 'shell-completion)
 
+;; settings for enabling copying from emacs
+(setq x-select-enable-clipboard t)
+
 ;;; settings for Interactively Do Things
 (require 'ido)
 (ido-mode t)
@@ -112,6 +115,17 @@
 
 ;; settings set scss to css mode
 (add-to-list 'auto-mode-alist '("\\.scss" . css-mode))
+
+;; settings for scala mode
+(add-to-list 'load-path "~/.emacs.d/scala/")
+(add-to-list 'load-path "~/.emacs.d/scala/scala-mode2/")
+(require 'scala-mode2)
+(require 'scalatra-mode)
+(defun scala-mode-hook ()
+  (autoload 'scala-mode "scala-mode" nil t)
+  (add-to-list 'auto-mode-alist '("\\.scala\\'" . scala-mode))
+  (add-hook 'ruby-mode-hook '(lambda ()
+                               (scalatra-mode))))
 
 ;; settings indentation width
 (setq javascript-indent-level 4)
