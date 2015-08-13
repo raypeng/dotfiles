@@ -135,8 +135,6 @@ PS1='\W> '
 alias g='gedit'
 alias vim='vi'
 alias e='emacs -nw'
-# ls rails project controllers
-alias lsrails='tree app/controllers/'
 alias cd..='cd ..'
 alias cd...='cd ../../'
 alias cd....='cd ../../../'

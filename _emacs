@@ -133,3 +133,9 @@
 
 ;; settings for font
 ;; (set-face-attribute 'default nil :family "Anonymous Pro" :height 120)
+
+;; settings for haskell indentation
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+
+;; settings set pl to prolog mode instead of perl
+(add-to-list 'auto-mode-alist '("\\.pl" . prolog-mode))
