@@ -119,9 +119,12 @@ export PATH=$HOME/.rvm/gems/ruby-2.0.0-p481/bin/:$PATH
 # export PATH=$HOME/.rvm/gems/ruby-1.9.3-p194/bin/:$PATH
 
 # enable 256 colors
-if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
-    export TERM=xterm-256color
-fi
+# if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+#     export TERM=xterm-256color
+# fi
+
+# export TERM=screen-256color
+export TERM=xterm-256color
 
 # add gae to path
 export PATH=$HOME/Documents/gae/:$PATH
@@ -134,7 +137,7 @@ echo 'Hi, Ray!'
 PS1='\W> '
 alias g='gedit'
 alias vim='vi'
-alias e='emacs -nw'
+alias e='TERM=xterm-256color emacs -nw'
 alias cd..='cd ..'
 alias cd...='cd ../../'
 alias cd....='cd ../../../'
@@ -153,3 +156,16 @@ alias rs='rails s'
 alias psgrep='ps aux | grep '
 # faster gnome-open
 alias open='gnome-open'
+# g++ c++11
+alias g++='g++ -std=c++0x'
+
+# list creation time of files
+crtime() {
+    for target in "${@}"; do
+        inode=$(stat -c '%i' "${target}")
+        fs=$(df  --output=source "${target}"  | tail -1)
+        crtime=$(sudo debugfs -R 'stat <'"${inode}"'>' "${fs}" 2>/dev/null | 
+        grep -oP 'crtime.*--\s*\K.*')
+        printf "%s\t%s\n" "${target}" "${crtime}"
+    done
+}

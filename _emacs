@@ -130,6 +130,7 @@
 ;; settings indentation width
 (setq javascript-indent-level 4)
 (setq cssm-indent-level 2)
+(setq css-indent-offset 2)
 
 ;; settings for font
 ;; (set-face-attribute 'default nil :family "Anonymous Pro" :height 120)
