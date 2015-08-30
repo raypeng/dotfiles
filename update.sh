@@ -1,9 +1,5 @@
-rm _emacs
-rm _tmux_conf
-rm _zshrc
-rm _bashrc
-ln ~/.emacs _emacs
-ln ~/.tmux.conf _tmux_conf
-ln ~/.bashrc _bashrc
-ln ~/.zshrc _zshrc
+cp ~/.emacs _emacs
+cp ~/.tmux.conf _tmux_conf
+cp ~/.bashrc _bashrc
+cp ~/.zshrc _zshrc
 
