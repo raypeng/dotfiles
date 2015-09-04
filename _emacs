@@ -1,5 +1,5 @@
 ;; add load path
-(add-to-list 'load-path "~/.emacs.d/")
+;; (add-to-list 'load-path "~/.emacs.d/")
 (add-to-list 'load-path "~/.emacs.d/util/")
 
 ;; settings for enabling tab completion in M-x shell
@@ -111,7 +111,8 @@
 (eval-after-load "color-theme"
   '(progn    
      (color-theme-initialize)
-     (color-theme-robin-hood)))
+;;     (color-theme-robin-hood)))
+     (color-theme-vim-colors)))
 
 ;; settings set scss to css mode
 (add-to-list 'auto-mode-alist '("\\.scss" . css-mode))

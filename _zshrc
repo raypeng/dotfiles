@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ray/.oh-my-zsh
+export ZSH=/Users/ray/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -49,12 +49,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-
-plugins=(git z)
+plugins=(git)
 
 # User configuration
 
-export PATH="/home/ray/.rvm/gems/ruby-2.0.0-p481/bin:/home/ray/.rvm/gems/ruby-2.0.0-p481@global/bin:/home/ray/.rvm/rubies/ruby-2.0.0-p481/bin:/usr/local/heroku/bin:/home/ray/Documents/gae:/usr/local/heroku/bin:/home/ray/Documents/gae:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/ray/.rvm/bin"
+export PATH="/Users/ray/.rvm/gems/ruby-2.0.0-p481/bin/:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -84,16 +83,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-# my configs
-echo 'Hi, Ray!'
-alias g='gedit'
-alias vim='vi'
-alias e='emacs -nw'
-# see commands frequency
-alias cmdfreq='sort ~/.bash_history | uniq -c | sort -n -r | less'
+# something in my previous bashrc
 # faster git commands
 alias gas='git add --all . && git status'
+alias gdh='git diff HEAD'
 alias gc='git commit -am'
 alias gp='git push -u origin master'
 # faster rails commands
@@ -101,9 +94,5 @@ alias rc='rails c'
 alias rs='rails s'
 # faster grep for ps
 alias psgrep='ps aux | grep '
-# faster gnome-open
-alias open='gnome-open'
-
-# z plugin
-. $ZSH/plugins/z/z.sh
-
+# g++ c++11
+alias g++='g++ -std=c++0x'
