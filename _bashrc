@@ -85,6 +85,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
+alias ls='ls -G'
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
@@ -126,36 +127,27 @@ export PATH=$HOME/.rvm/gems/ruby-2.0.0-p481/bin/:$PATH
 # export TERM=screen-256color
 export TERM=xterm-256color
 
-# add gae to path
-export PATH=$HOME/Documents/gae/:$PATH
-
-# added by the Heroku Toolbelt
-export PATH=/usr/local/heroku/bin:$PATH
-
 # my configs
 echo 'Hi, Ray!'
 PS1='\W> '
-alias g='gedit'
+
+# my aliases
 alias vim='vi'
 alias e='TERM=xterm-256color emacs -nw'
-alias cd..='cd ..'
-alias cd...='cd ../../'
-alias cd....='cd ../../../'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
 # see commands frequency
 alias cmdfreq='sort ~/.bash_history | uniq -c | sort -n -r | less'
 # faster git commands
 alias gas='git add --all . && git status'
 alias gc='git commit -am'
 alias gp='git push -u origin master'
-# faster project folder navigation
-BR=$HOME/Documents/briefr
 # faster rails commands
 alias rc='rails c'
 alias rs='rails s'
 # faster grep for ps
 alias psgrep='ps aux | grep '
-# faster gnome-open
-alias open='gnome-open'
 # g++ c++11
 alias g++='g++ -std=c++0x'
 
