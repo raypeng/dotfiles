@@ -146,3 +146,5 @@ alias rs='rails s'
 alias psgrep='ps aux | grep '
 # g++ c++11
 alias g++='g++ -std=c++0x'
+# safer rm
+alias rm='rm -I'

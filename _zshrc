@@ -84,6 +84,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # something in my previous bashrc
+# my aliases
+alias vim='vi'
+alias e='TERM=xterm-256color emacs -nw'
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+# see commands frequency
+alias cmdfreq='sort ~/.bash_history | uniq -c | sort -n -r | less'
 # faster git commands
 alias gas='git add --all . && git status'
 alias gdh='git diff HEAD'
@@ -96,3 +104,7 @@ alias rs='rails s'
 alias psgrep='ps aux | grep '
 # g++ c++11
 alias g++='g++ -std=c++0x'
+# safer rm
+alias rm='rm -i'
+
+source ~/.zshenv

@@ -108,11 +108,10 @@
 ;; settings for emacs color theme
 (add-to-list 'load-path "~/.emacs.d/color-theme/")
 (require 'color-theme)
-(eval-after-load "color-theme"
-  '(progn    
-     (color-theme-initialize)
-;;     (color-theme-robin-hood)))
-     (color-theme-vim-colors)))
+(color-theme-initialize)
+(color-theme-gnome2)
+;; (color-theme-robin-hood)
+(load-theme 'tsdh-dark)
 
 ;; settings set scss to css mode
 (add-to-list 'auto-mode-alist '("\\.scss" . css-mode))
