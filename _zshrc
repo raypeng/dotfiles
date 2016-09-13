@@ -108,3 +108,11 @@ alias g++='g++ -std=c++0x'
 alias rm='rm -i'
 
 source ~/.zshenv
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+. /Users/ray/torch/install/bin/torch-activate
+
+unsetopt HIST_VERIFY

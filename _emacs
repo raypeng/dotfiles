@@ -140,3 +140,7 @@
 
 ;; settings set pl to prolog mode instead of perl
 (add-to-list 'auto-mode-alist '("\\.pl" . prolog-mode))
+
+;; settings for golang mode
+(add-to-list 'load-path "~/.emacs.d/go/")
+(require 'go-mode-autoloads)

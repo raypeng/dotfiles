@@ -148,3 +148,6 @@ alias psgrep='ps aux | grep '
 alias g++='g++ -std=c++0x'
 # safer rm
 alias rm='rm -I'
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
