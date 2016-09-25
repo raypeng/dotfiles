@@ -144,3 +144,8 @@
 ;; settings for golang mode
 (add-to-list 'load-path "~/.emacs.d/go/")
 (require 'go-mode-autoloads)
+(add-hook 'go-mode-hook
+          (lambda ()
+            (add-hook 'before-save-hook 'gofmt-before-safe)
+            (setq tab-width 4)
+            (setq indent-tabs-mode 1)))
