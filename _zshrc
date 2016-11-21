@@ -102,6 +102,8 @@ alias rc='rails c'
 alias rs='rails s'
 # faster grep for ps
 alias psgrep='ps aux | grep '
+# rgrep
+alias rgrep='grep -r'
 # g++ c++11
 alias g++='g++ -std=c++0x'
 # safer rm
@@ -114,5 +116,9 @@ export NVM_DIR="$HOME/.nvm"
 
 
 . /Users/ray/torch/install/bin/torch-activate
+
+# spark
+export PYTHONPATH=/Users/ray/spark/python:$PYTHONPATH
+export PATH=/Users/ray/spark/bin:$PATH
 
 unsetopt HIST_VERIFY
