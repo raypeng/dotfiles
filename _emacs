@@ -33,7 +33,7 @@
 (package-initialize)
 
 ;; load emacs starter kit init file
-(load "~/.emacs.d/emacs24-starter-kit/init.el")
+;; (load "~/.emacs.d/emacs24-starter-kit/init.el")
 
 ;; settings for tuareg mode
 (add-to-list 'load-path "~/.emacs.d/ocaml/")
@@ -131,6 +131,7 @@
 (setq javascript-indent-level 4)
 (setq cssm-indent-level 2)
 (setq css-indent-offset 2)
+(setq-default c-basic-offset 4)
 
 ;; settings for font
 ;; (set-face-attribute 'default nil :family "Anonymous Pro" :height 120)
@@ -149,3 +150,6 @@
             (add-hook 'before-save-hook 'gofmt-before-safe)
             (setq tab-width 4)
             (setq indent-tabs-mode 1)))
+
+;; add .cu files to c-mode
+(add-to-list 'auto-mode-alist '("\\.cu\\'" . c-mode))
