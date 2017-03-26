@@ -125,3 +125,8 @@ export PATH=/Users/ray/spark/bin:$PATH
 # export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
 
 unsetopt HIST_VERIFY
+
+# random quotes from a cute cow
+fortune | cowsay
+
+echo 'Hi, Ray!'
